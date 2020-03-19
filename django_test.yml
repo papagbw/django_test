@@ -1,0 +1,11 @@
+name: django-test-env
+channels:
+  - conda-forge
+dependencies:
+  - python == 3.7
+  - django
+  - ipython
+  - jupyter
+  - numpy
+  - pip
+  - scipy
