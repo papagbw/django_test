@@ -1,0 +1,4 @@
+.idea
+*/__pycache__/*
+django_test.egg-info/
+db.sqlite3
