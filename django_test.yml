@@ -8,4 +8,6 @@ dependencies:
   - jupyter
   - numpy
   - pip
+  - psycopg2
   - scipy
+
