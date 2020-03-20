@@ -1,5 +1,6 @@
 .idea
-*/__pycache__/*
+__pycache__/
 django_test.egg-info/
 db.sqlite3
 */__pycache__/*
+migrations/

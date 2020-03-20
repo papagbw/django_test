@@ -17,4 +17,6 @@ class Teacher(Person):
 
 
 class Student(Person):
-    pass
+    hr_teacher = models.ForeignKey(Teacher,
+                                   on_delete=models.SET_NULL,
+                                   null=True)
