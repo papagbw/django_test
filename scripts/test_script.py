@@ -27,7 +27,8 @@ def create_or_get_teacher(*, name: str, surname: str) -> Teacher:
     return teacher
 
 
-def create_or_get_class(*, topic: str,
+def create_or_get_class(*,
+                        topic: str,
                         class_number: int,
                         lecturer: Teacher) -> Class:
     try:
@@ -130,3 +131,4 @@ if __name__ == '__main__':
     print("The students with blue bags are")
     for s in Student.objects.filter(bookbag__color__contains="blue"):
         print(s)
+        s.save()

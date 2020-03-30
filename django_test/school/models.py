@@ -2,6 +2,9 @@ from enum import Enum
 
 from django.db import models
 
+RW_STATUS = True
+
+
 class Color(Enum):
     red = 0
     orange = 1
@@ -12,6 +15,12 @@ class Color(Enum):
     white = 6
     gray = 7
     black = 8
+
+
+class ReadPermissionsMixin:
+    class Meta:
+        if not RW_STATUS:
+            app_label = 'support'
 
 
 class Person(models.Model):
@@ -29,7 +38,7 @@ class Teacher(Person):
     pass
 
 
-class Bookbag(models.Model):
+class Bookbag(models.Model, ReadPermissionsMixin):
     color = models.CharField(max_length=100,
                              choices=tuple((tag, tag.value) for tag in Color))
 
